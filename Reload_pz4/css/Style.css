@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #000000; 
+}
+
+body {
+    font-family: Georgia;
+    font-size: 20px;
+    max-width: 1200px;
+    margin: auto;
+    color: black;
+    background-image: url(/image/background.webp);
+    background-repeat: repeat;
+    box-shadow: 0 0 10px 10px black;
+}
+
+.logo img{
+    height: 80px;
+    }
+
+
+
+.headnav1 nav ul li{
+    list-style: none;
+    margin-left: 1vw;
+}
+
+.headnav2 nav ul li{
+    list-style: none;
+    margin-right: 1vw;
+}
+.MainCart{
+    background-image: url(/image/MainCart.jpg);
+    background-size: 1200px;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MainCart h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 30pt;
+    padding-top: 120px;
+    cursor: default;
+}
+
+
+.OutAdv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: black;
+    max-height: 500px;
+    height: 500px;
+}    
+.OutAdvTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.OutAdv h2{
+    margin-top: 80px;
+}
+#OutAdvText{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.QSP{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    margin-top: 10%;
+}
+.QSP div{
+    text-align: center;
+    
+}
+.QSP div a{
+    color: white;
+    outline: none;
+
+}
+.QSP div a i{
+    font-size: 30pt;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+    color: black;
+}
+.QSP p{
+    margin-top: 10px;
+    font-size: 23pt;
+}
+
+
+
+
+.QSP i:hover{
+    box-shadow: 0px 0px 10px 2px rgb(187, 187, 187);
+    transition: 0.2s;
+}
+
+.MainCart img{
+    width: 100%;
+}
+.BuyForm
+{
+    background-image: url(/image/FormaBig.jpg);
+    background-size: 1200px;
+    background-position: center;
+    height: 500px;
+}
+
+.BuyForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: Georgia;
+    margin-right: 150px;
+    color: white;
+    padding-top: 40px;
+}
+
+.BuyForm input{
+    height: 32px;
+    border: 2px;
+    font-family: Georgia;
+    width: 300px;
+    outline: none;
+}
+.BuyForm select{
+    font-family: Georgia;
+    height: 32px;
+    border: 2px;
+    width: 300px;
+    outline: none;
+}
+
+
+.NewsHeading{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.News a{
+    color:white;
+    text-decoration: none;
+    list-style: none;
+}
+.News article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   max-width: 465px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.News img{
+    height: 150px;
+    width: 150px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+.News article p{
+    max-width: 300px;
+    max-height: 145px;
+    overflow-x: hidden;
+    font-family: Georgia;
+    
+}
+.NewsBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    height: 160px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#TopBorder{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 0px;
+    width: 100px;
+    border: 1px rgb(63, 63, 63) solid;
+}
+#BotBorder{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 0px;
+    width: 100px;
+    border: 1px rgb(63, 63, 63) solid;
+}
+.footweb ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footweb ul li .fa {
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+    transition: 0.3s;
+}
+
+
+
+.footweb  ul li a {
+    position: relative;
+    display: block;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.footweb ul li a:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+.footweb ul li a:hover .fa{
+    color: black;
+    transition: 0.5s;
+}
+
+.copyright{
+    font-size: 15px;
+    font-family: Georgia;
+    margin-top: 15px;
+}
