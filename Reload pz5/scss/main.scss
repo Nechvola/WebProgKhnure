@@ -1,0 +1,363 @@
+@import "./variables1";
+
+@mixin blackbut ($width, $height, $bord-rad){
+    background-color: map-get($mp, b);
+    color: map-get($mp, w);
+    border: map-get($mp, b);
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 8pt;
+    border-radius: $bord-rad;
+    width: $width;
+    height: $height;
+    outline: none;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 2px 1px map-get($mp, b);
+        transition: 0.1s;
+    }
+    &:focus{
+        background-color: map-get($mp, lb);
+    }}
+@mixin anim ($transf, $transI) {
+    opacity: 0; transform: translateX($transf);  transition: $transI all ease-in-out;
+}
+
+@mixin headnav ($marg-l, $marg-r){
+    display: flex;
+    flex-direction: row;
+    margin-left: $marg-l;
+    margin-right: $marg-r;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: map-get($mp, dg);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: map-get($mp, b); 
+}
+
+body {
+    font-family: Georgia;
+    font-size: 20px;
+    max-width: 1200px;
+    margin: auto;
+    color: map-get($mp, b); 
+    background-image: url(/image/background.webp);
+    background-repeat: repeat;
+    box-shadow: 0 0 10px 10px map-get($mp, b); 
+}
+
+.headnav1 nav ul{@include headnav(50px,0); 
+    li{
+    list-style: none;
+    margin-left: 1vw;
+}}
+.headnav2 nav ul{@include headnav(0, 50px); 
+    li{
+    list-style: none;
+    margin-left: 1vw;
+}}
+
+#winbut{@include blackbut(100px, 36px, 8px); display: block; margin: 0 auto;}
+.win{background-color: map-get($mp, w); 
+    color: map-get($mp, b); 
+    position: fixed;
+    display: none;
+    width: 600px;
+    top: 50%;
+    padding: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5px;
+}
+
+.win.active{display:block;}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#overlay{position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    pointer-events: none;
+}
+
+.BuyForm{
+    background-image: url(/image/FormaBig.jpg);
+    background-size: 1200px;
+    background-position: center;
+    height: 500px;
+    .BuyFormm{
+        @include anim(200px,0.7s);
+        button{
+            @include blackbut(100px, 36px, 0px);
+            margin-top: 20px;
+            margin-right: 200px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: Georgia;
+        margin-right: 150px;
+        color: map-get($mp, w); 
+        padding-top: 40px;
+    }
+    input{
+        height: 32px;
+        border: 2px;
+        font-family: Georgia;
+        width: 300px;
+        outline: none;
+    }
+    select{
+        font-family: Georgia;
+        height: 32px;
+        border: 2px;
+        width: 300px;
+        outline: none;
+    }
+}
+
+
+.MainCart{
+    background-image: url(/image/MainCart.jpg);
+    background-size: 1200px;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button{
+        @include blackbut(130px, 40px, 20px);
+        margin-top: 50px;
+    }
+    h1{
+        color: map-get($mp, w); 
+        font-weight: bolder;
+        font-size: 30pt;
+        padding-top: 120px;
+        cursor: default;
+    }
+    img{width: 100%;}
+
+}
+
+.OutAdv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: map-get($mp, w);
+    background-color: map-get($mp, b);
+    max-height: $constheig;
+    height: $constheig;
+    font-family: Georgia;
+    h2{margin-top: 80px;}
+    
+    .OutAdvTop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #OutAdvText{
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .QSP{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 700px;
+        margin-top: 10%;
+        div{
+            text-align: center;
+            a{
+                color: map-get($mp, w); 
+                outline: none;
+                i{
+                    font-size: 30pt;
+                    line-height: 50px;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: map-get($mp, w); 
+                    color: map-get($mp, b); 
+                    &:hover{
+                        box-shadow: 0px 0px 10px 2px rgb(187, 187, 187);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+        p{
+            margin-top: 10px;
+            font-size: 23pt;
+        }
+    }
+}    
+
+.News{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: map-get($mp, w);
+    background-color: map-get($mp, b);
+    max-height: $constheig;
+    height: $constheig;
+    font-family: Georgia;
+    .FirstNews{@include anim(-200px,0.4s);}
+    .SecondNews{@include anim(200px,0.4s);}
+    .NewsHeading{
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+        list-style: none;
+    }
+    article{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 465px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        p{
+            max-width: 300px;
+            max-height: 145px;
+            overflow-x: hidden;
+            font-family: Georgia;   
+        }
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        margin-right: 15px;
+        border-radius: 4px;
+    }
+    .NewsBlock{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    height: 80px;
+    width: 100%;
+    background-color: map-get($mp, b);
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: map-get($mp, w);
+        &:hover
+        {
+            text-decoration: none;
+            color: map-get($mp, g);
+            transition: 0.3s;   
+        }
+    }
+     img{
+        height: 80px;
+        }
+}
+.appear{
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
+
+footer{
+    height: 160px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #TopBorder{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 0px;
+        width: 100px;
+        border: 1px map-get($mp, dg)  solid;
+    }
+    #BotBorder{
+        @extend #TopBorder ;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .footweb ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        .s1{  @include anim(200px,0.3s)}
+        .s2{  @include anim(200px,0.4s)}
+        .s3{  @include anim(200px,0.5s)}
+        .s4{  @include anim(200px,0.6s)}
+        .s5{  @include anim(200px,0.7s)}
+        li{
+            display: block;
+            a {
+                position: relative;
+                display: block;
+                margin-left: 20px;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background-color: map-get($mp, b);
+                text-align: center;
+                transition: 0.3s;
+                &:hover {
+                    background-color: map-get($mp, w); 
+                    transition: 0.5s;
+                    .fa{
+                        color: black;
+                        transition: 0.5s;
+                    }
+                }
+               
+                .fa {
+                    color:map-get($mp, w); 
+                    font-size: 25px;
+                    line-height: 40px;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    .copyright{
+        font-size: 15px;
+        font-family: Georgia;
+        margin-top: 15px;
+    }
+
+}
+
+.Form.Error{
+    border: 1px solid red !important;
+}
+.Form.Success{
+    border: 1px solid green !important;
+}
