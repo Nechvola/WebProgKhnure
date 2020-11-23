@@ -55,7 +55,7 @@ body {
     max-width: 1200px;
     margin: auto;
     color: map-get($mp, b); 
-    background-image: url(/image/background.webp);
+    background-image: url(../image/background.webp);
     background-repeat: repeat;
     box-shadow: 0 0 10px 10px map-get($mp, b); 
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .BuyForm{
-    background-image: url(/image/FormaBig.jpg);
+    background-image: url(../image/FormaBig.jpg);
     background-size: 1200px;
     background-position: center;
     height: 500px;
@@ -139,7 +139,7 @@ body {
 
 
 .MainCart{
-    background-image: url(/image/MainCart.jpg);
+    background-image: url(../image/MainCart.jpg);
     background-size: 1200px;
     background-position: center;
     height: 500px;
