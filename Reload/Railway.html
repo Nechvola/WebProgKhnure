@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="stylesheet" href="./scss/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>RailwayCompany</title>
 </head>
@@ -53,28 +54,27 @@
             </div>
             <div class="QSP">
                     <div><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><p>Quality</p></div>
-                    <div><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i></a><p>Support</p></div>
+                    <div id="sup"><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i></a><p>Support</p></div>
                     <div><a href="#"><i class="fa fa-money" aria-hidden="true"></i></a><p>Price</p>  </div>
             </div>
         </section>
 
         <section class="BuyForm" id="BuyForm">
-            <form >
-                <p> <label for="Email">Your E-mail:</label><Br><input required type="email" id="Email" placeholder=""><Br>
-                    <label for="YourName">Your Name</label><Br><input required type="text" id="YourName" placeholder=""><br>
-                    <label for="YourPhone">Your Phone</label><Br><input required type="text" id="YourPhone" placeholder=""><br>
+            <form class="BuyFormm">
+                <p> <label  for="Email">Your E-mail:</label><Br><input  type="email" id="email" placeholder=""><Br>
+                    <label  for="YourName">Your Name</label><Br><input  type="text" id="name2" placeholder=""><br>
+                    <label  for="YourPhone">Your Phone</label><Br><input type="text" id="phone" placeholder=""><br>
                     <label for="Calendar">Date:</label><Br>
-                    <input id="dateon" type="date" name="calendar" value="2020-10-10"
-                          max="2020-11-31" min="2020-10-31"><Br>
-                    <label for="inp1">From:</label><Br><input required type="text" id="inp1" placeholder=""><Br>
-                    <label for="inp2">To:</label><Br><input required type="text" id="inp2" placeholder=""><br>
+                    <input id="dateon" type="date" name="calendar" ><Br>
+                    <label  for="inp1">From:</label><Br><input  type="text" id="from" placeholder=""><Br>
+                    <label  for="inp2">To:</label><Br><input  type="text" id="to" placeholder=""><br>
                     <label for="type">Type:</label><br>
                             <select required>
-                                <option>-</option>
+                                <option>Any</option>
                                 <option>Reserved</option>
                                 <option>Compartment</option>
-                            </select></p>
-                        
+                            </select>
+                </p>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -114,6 +114,12 @@
         </div>
 
     </section>
+    <div id="overlay"></div>
+    <div class="win">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium dignissimos deserunt animi amet maiores, cupiditate fugiat quibusdam delectus aperiam, voluptate, officiis iure. Illum, facilis corporis minus doloribus eius in necessitatibus magni unde labore voluptate vero nostrum quam officiis fugit delectus corrupti sequi eligendi tenetur est. Quis accusamus cumque culpa error ipsa eum sint reprehenderit explicabo placeat minima neque voluptate tempora adipisci quae nisi quasi quia cupiditate, saepe nihil officia perferendis, libero dolores a! Facere laudantium exercitationem fugiat. Dolor sequi facilis quaerat rerum totam odit omnis, cupiditate aliquid ratione fugiat facere amet dolore ex! Facilis veniam aut deleniti illum! Reprehenderit aspernatur assumenda enim voluptatem. Perspiciatis similique provident, vero possimus expedita aliquam cumque nihil dignissimos perferendis totam, illo hic soluta beatae laborum quaerat itaque aperiam porro ratione dolorum? Nulla cumque veniam enim perferendis illo blanditiis iusto voluptatum nostrum. Veritatis, provident! Tempore laborum accusamus nam deleniti, reiciendis sed non eligendi voluptates iure repellat quis. Reiciendis ullam nihil, delectus consectetur vitae sit suscipit optio porro impedit error modi nam aliquid molestiae perferendis maxime iure, itaque tempore similique voluptate ratione adipisci. Quae voluptatem, nihil ducimus molestias voluptas suscipit adipisci hic eveniet sequi, illo excepturi officia accusamus pariatur ut, vero id consequuntur ea illum a! Esse?</p>
+        <button id="winbut" type="submit">Exit</button>
+    </div>
+
     </main>
 
     <footer>
@@ -124,15 +130,16 @@
         <div id="BotBorder"></div>
         <div class="footweb" id="footid">
             <ul>
-                <li><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#twitter"><i class="fa fa-twitter"></i></a</li>
-                <li><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#youtube"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#telegram"><i class="fa fa-telegram"></i></a></li>
+                <li class="s1"><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
+                <li class="s2"><a href="#twitter"><i class="fa fa-twitter"></i></a</li>
+                <li class="s3"><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
+                <li class="s4"><a href="#youtube"><i class="fa fa-youtube"></i></a></li>
+                <li class="s5"><a href="#telegram"><i class="fa fa-telegram"></i></a></li>
             </ul>
         </div>
         <div class="copyright"><p>2020.©RailwayCompany.Все права в опасности.</p></div>
         
     </footer>
+    <script src="tr.js"></script>
 </body>
 </html>
